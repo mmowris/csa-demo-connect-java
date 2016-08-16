@@ -35,10 +35,12 @@ public class Main {
       try {
         connection = DatabaseUrl.extract().getConnection();
 
-        Statement stmt = connection.createStatement();
-        stmt.executeUpdate("CREATE TABLE IF NOT EXISTS ticks (tick timestamp)");
-        stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
-        ResultSet rs = stmt.executeQuery("SELECT tick FROM ticks");
+        //Statement stmt = connection.createStatement();
+        //stmt.executeUpdate("SELECT * FROM Account");
+        //stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
+        ResultSet rs = stmt.executeQuery("SELECT Name FROM Account");
+        System.out.print("**************");
+        System.out.print(rs);
 
         ArrayList<String> output = new ArrayList<String>();
         while (rs.next()) {
