@@ -45,7 +45,7 @@ public class Main {
 
         ArrayList<String> output = new ArrayList<String>();
         while (rs.next()) {
-          output.add( "Read from DB: " + rs.getString(1));
+          output.add( "Read from DB: " + rs.getString(1) + rs.getString(2) + rs.getString(3) );
           //output.add( "Read from DB: " + rs.getTimestamp("tick"));
         }
 
