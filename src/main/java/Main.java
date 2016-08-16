@@ -34,7 +34,7 @@ public class Main {
       Map<String, Object> attributes = new HashMap<>();
       try {
         connection = DatabaseUrl.extract().getConnection();
-
+        System.out.println("TESTTTTTTTTTTTTTT");
         Statement stmt = connection.createStatement();
         stmt.executeUpdate("DROP TABLE IF EXISTS ticks");
         //stmt.executeUpdate("SELECT * FROM Account");
