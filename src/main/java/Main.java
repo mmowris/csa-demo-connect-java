@@ -35,12 +35,13 @@ public class Main {
       try {
         connection = DatabaseUrl.extract().getConnection();
 
-        //Statement stmt = connection.createStatement();
+        Statement stmt = connection.createStatement();
+        stmt.executeUpdate("DROP TABLE IF EXISTS ticks")
         //stmt.executeUpdate("SELECT * FROM Account");
         //stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
         ResultSet rs = stmt.executeQuery("SELECT Name FROM Account");
-        System.out.print("**************");
-        System.out.print(rs);
+        System.out.println("**************");
+        System.out.println(rs);
 
         ArrayList<String> output = new ArrayList<String>();
         while (rs.next()) {
