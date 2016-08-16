@@ -34,12 +34,11 @@ public class Main {
       Map<String, Object> attributes = new HashMap<>();
       try {
         connection = DatabaseUrl.extract().getConnection();
-        System.out.println("TESTTTTTTTTTTTTTT");
         Statement stmt = connection.createStatement();
         stmt.executeUpdate("DROP TABLE IF EXISTS ticks");
         //stmt.executeUpdate("SELECT * FROM Account");
         //stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
-        ResultSet rs = stmt.executeQuery("SELECT Name FROM Account");
+        ResultSet rs = stmt.executeQuery("SELECT * FROM salesforce.account");
         System.out.println("**************");
         System.out.println(rs);
 
