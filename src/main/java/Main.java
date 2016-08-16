@@ -36,7 +36,7 @@ public class Main {
         connection = DatabaseUrl.extract().getConnection();
 
         Statement stmt = connection.createStatement();
-        stmt.executeUpdate("DROP TABLE IF EXISTS ticks")
+        stmt.executeUpdate("DROP TABLE IF EXISTS ticks");
         //stmt.executeUpdate("SELECT * FROM Account");
         //stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
         ResultSet rs = stmt.executeQuery("SELECT Name FROM Account");
