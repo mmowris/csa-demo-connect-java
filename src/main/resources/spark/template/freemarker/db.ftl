@@ -21,7 +21,7 @@
 			<td>
 				<tr>${x}</tr>
 			</td>
-			</table>#list>
+			</#list>
 		</table>
 		<!--<ul>
 			<#list results as x>
