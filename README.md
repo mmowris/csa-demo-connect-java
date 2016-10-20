@@ -17,3 +17,5 @@
 <h4>Changing the Database Query</h4>
 
 Update query in Main.java
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
